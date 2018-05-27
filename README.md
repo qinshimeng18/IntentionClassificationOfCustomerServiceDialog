@@ -5,6 +5,7 @@ User intention classification is a hot topic today, with many kinds of applicati
 **Mainly by Huang YiLun**
 ## Data Preprocessing And Word2vec  
 
+![data_generator](./data_generator.png)
 Data comes from the customer service dialog of china mobile, which has the following columns: 'sessionid','id','acceptnumber','requesttime','request','serviceid','responsetime','response'.The original datasets has over 70,000 rows.  
 
 There are two Ipython notebook for data preprocessing (data_cleaning1.ipynb, data_cleaning2.ipynb). You can easily find each step (deleting, cleaning, merging, filtering, splitting) of the report in the notebook. 
@@ -39,9 +40,10 @@ And there is a parameter to control whether useing PCA to reduction the vector d
 ## Response Cluster  
 This structure will generate more and more labeled data iteratively. Unlabeled data will be clustered to get several categories and we could regard the category id as a kind of intention. If a category has some common meaning, a new intention  will be found and added into the intentions set. As a result, these data with new intention will rich the ground truth data set created manually, which will evaluate the result of cluster by adjusted  Rand index.  
 ### cluster_compare.ipynb  
-	- We tried several methods, include agglomerativeClustering, kmeans and dbscan, to cluster the response. In semantic understanding by our review, Kmeans get the best classification result.
-	- We analysis the result of cluster
+- We tried several methods, include agglomerativeClustering, kmeans and dbscan, to cluster the response. In semantic understanding by our review, Kmeans get the best classification result.
+- We analysis the result of cluster
 ## Intention Classification  
-### RNN_classifier.ipynb    
-	- Train a model with Bidirectional LSTM Network of TimeDistributed Layer
-	- By using different sentence embedding methods, the accuracy rise up slowly. So, our model can handle this task.
+### RNN_classifier.ipynb  
+![model](./model.png)    
+- Train a model with Bidirectional LSTM Network of TimeDistributed Layer  
+- By using different sentence embedding methods, the accuracy rise up slowly. So, our model can handle this task.
