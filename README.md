@@ -47,3 +47,11 @@ This structure will generate more and more labeled data iteratively. Unlabeled d
 ![model](./model.png)    
 - Train a model with Bidirectional LSTM Network of TimeDistributed Layer  
 - By using different sentence embedding methods, the accuracy rise up slowly. So, our model can handle this task.
+
+## link  
+[Keras LSTM tutorial – How to easily build a powerful deep learning language model](http://adventuresinmachinelearning.com/keras-lstm-tutorial/)  
+[
+How to Use Word Embedding Layers for Deep Learning with Keras](https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/)  
+[
+Evaluate the Performance Of Deep Learning Models in Keras](https://machinelearningmastery.com/evaluate-performance-deep-learning-models-keras/)  
+[When and How to use TimeDistributedDense](https://github.com/keras-team/keras/issues/1029)  
